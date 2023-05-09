@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div>Header</div>
+    <h1>Role Forge</h1>
   )
 }
 

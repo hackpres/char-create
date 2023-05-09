@@ -31,8 +31,10 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-curie-001",
       prompt: generatePrompt(message),
-      temperature: 0.6,
+      temperature: 0.8,
+      max_tokens: 300,
     });
+    console.log(completion.data);
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
     // Consider adjusting the error handling logic for your use case
