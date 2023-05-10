@@ -1,5 +1,4 @@
 import styles from '../styles/Home.module.css'
-import Nav from '../components/nav/Nav'
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import RoleType from '../components/form/RoleType'
@@ -38,7 +37,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Nav />
       <Header />
       <TitleHero />
       <RoleType />
