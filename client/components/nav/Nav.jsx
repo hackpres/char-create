@@ -34,17 +34,19 @@ function Nav() {
           position: absolute;
           right: 0;
           top: 0;
-          animation: ${hamburgerOpen ? 'appear .35s ease-in forwards' : 'disappear .5s ease-out forwards'};
+          opacity: 0;
+          animation: ${hamburgerOpen ? 'appear .35s ease-in forwards' : 'disappear 1s ease-out forwards'};
         }
         .home, .about, .profile {
           justify-content: flex-end;
+          diplay: flex;
           margin-bottom: 1.5rem;
           margin-right: 1rem;
           border-right: 3px solid #ccdc;
           transform-origin: 1px;
           transition: all .05s linear;
-          display: ${hamburgerOpen ? 'flex' : 'none'};
-          animation: ${hamburgerOpen ? '.5s lift .35s ease-in forwards' : 'disappear .5s ease-out forwards'};          
+          opacity: 0;
+          animation: ${hamburgerOpen ? '.5s lift .35s ease-in forwards' : 'disappear .35s ease-out forwards'};          
         }
         nav > li:hover {
           background-color: #ccdc;
@@ -56,22 +58,12 @@ function Nav() {
           margin-top: 6rem;
         }
         @keyframes appear {
-          0% {
-            opacity: 0;
-            
-          }
-          100% {
-            opacity: 1;
-            
-          }
+          0% {opacity: 0;}
+          100% {opacity: 1;}
         }
         @keyframes disappear {
-          0% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-          }
+          0% {opacity: 1;}
+          100% {opacity: 0;}
         }
         @keyframes lift {
           0% {

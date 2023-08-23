@@ -20,22 +20,26 @@
   flex: 1;
   font-size: 2rem;
   font-weight: 900;
+  margin-bottom: 4rem;
 }
 
+.selectText {
+  display: flex;
+  text-align: center;
+  font-size: .85rem;
+  font-weight: 300;
+  width: 70vw;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 .titleForm {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 50vw;
-  margin: auto;
-}
-.formSelect {
-  flex-basis: 100%;
-  margin-bottom: 2rem;
-}
-.formSubmit {
-
+  margin: 0 auto auto;
 }
 
 @media (max-width: 600px) {
@@ -43,14 +47,5 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+
 }
